@@ -1,4 +1,5 @@
 <h1 align="center">
+  <img src="static/images/BA_icon.jpg" width="100" alt="AndroidControl-Pro Logo" />
   <br>
   AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification
 </h1>
