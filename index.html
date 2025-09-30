@@ -77,21 +77,40 @@
     }
     .publication-title {
         font-weight: 800;
+        margin-bottom: 1rem !important;
     }
+    
+    .publication-authors {
+        margin-bottom: 0.5rem !important;
+    }
+    
     .hero.teaser {
-        background-color: #f5f5f5;
-        border-top: 1px solid #e5e5e5;
-        border-bottom: 1px solid #e5e5e5;
+        background-color: #fafafa !important;
+        border: none !important;
+        margin-top: 0 !important;
     }
+    
     .hero.teaser .subtitle {
-        margin-top: 1.5rem;
-        color: #363636;
+        margin-top: 1rem !important;
+        color: #4a4a4a !important;
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
     }
+    
     #main-method-image {
-        max-width: 100%;
+        max-width: 90% !important;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin: 0 auto;
+        display: block;
     }
+    
+    /* 调整按钮样式，参考第一张图 */
+    .publication-links .button {
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+    
     .section.contributions ul {
         list-style-type: '✨ ';
         padding-left: 2em;
@@ -144,6 +163,16 @@
       background: #1d4ed8;
       transform: translateY(-2px);
     }
+    
+    /* 减少section之间的间距 */
+    .section {
+      padding: 2rem 1.5rem !important;
+    }
+    
+    /* 让整体布局更紧凑 */
+    .container.is-max-desktop {
+      max-width: 1152px !important;
+    }
   </style>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -190,19 +219,19 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
+  <section class="hero" style="padding-bottom: 1rem;">
+    <div class="hero-body" style="padding-bottom: 1rem;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification</h1>
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="margin-bottom: 0.5rem;">
               <span class="author-block">
                 Anonymous Authors
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
               <span class="author-block">Under Review</span>
             </div>
 
@@ -218,68 +247,58 @@
                 </a>
               </span>
 
-              <!-- <span class="link-block">
-                <a href="supplementary.pdf" target="_blank"
+              <span class="link-block">
+                <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
-                  <i class="fas fa-file-pdf"></i>
+                  <i class="fab fa-github"></i>
                 </span>
-                <span>Supplementary</span>
+                <span>Code</span>
               </a>
-            </span> -->
+            </span>
 
             <span class="link-block">
-              <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
+              <a href="https://huggingface.co/your-dataset" target="_blank"
               class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
-                <i class="fab fa-github"></i>
+                <i class="fas fa-database"></i>
               </span>
-              <span>Code</span>
+              <span>Dataset</span>
             </a>
           </span>
 
           <span class="link-block">
-            <a href="https://huggingface.co/your-dataset" target="_blank"
+            <a href="https://huggingface.co/your-model" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
-              <i class="fas fa-database"></i>
+              <i class="fas fa-robot"></i>
             </span>
-            <span>Dataset</span>
+            <span>Model</span>
           </a>
         </span>
 
         <span class="link-block">
-          <a href="https://huggingface.co/your-model" target="_blank"
+          <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
           class="external-link button is-normal is-rounded is-dark">
           <span class="icon">
-            <i class="fas fa-robot"></i>
+            <i class="ai ai-arxiv"></i>
           </span>
-          <span>Model</span>
+          <span>arXiv</span>
         </a>
       </span>
-
-      <span class="link-block">
-        <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
-        class="external-link button is-normal is-rounded is-dark">
-        <span class="icon">
-          <i class="ai ai-arxiv"></i>
-        </span>
-        <span>arXiv</span>
-      </a>
-    </span>
+    </div>
   </div>
-</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="hero teaser">
+<section class="hero teaser" style="padding-top: 1rem; padding-bottom: 2rem; background-color: #fafafa; border: none;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/method.png" alt="Overall pipeline of our work" id="main-method-image"/>
-      <h2 class="subtitle has-text-centered">
+    <div class="hero-body" style="padding-top: 1rem; padding-bottom: 1rem;">
+      <img src="static/images/method.png" alt="Overall pipeline of our work" id="main-method-image" style="max-width: 90%; margin: 0 auto; display: block;"/>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem; font-size: 1.1rem; color: #4a4a4a;">
         <b>Our Integrated Pipeline.</b> Top: The Magma-R1 training process with GRPO. Bottom: The systematic benchmark purification process, transforming the flawed AndroidControl into the reliable AndroidControl-Pro.
       </h2>
     </div>
