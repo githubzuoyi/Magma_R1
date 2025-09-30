@@ -7,12 +7,19 @@
   <meta name="title" content="AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification">
   <meta name="description" content="We reveal systemic flaws in existing GUI benchmarks and introduce AndroidControl-Pro, a purified benchmark for accurate evaluation. Our new SOTA model, Magma-R1, trained on just 2,400 high-quality samples, proves that data quality fundamentally trumps quantity in training high-performance GUI agents.">
   <meta name="keywords" content="GUI Agents, Benchmark Purification, Data Quality, Reinforcement Learning, Autonomous Agents, AndroidControl, Magma-R1, Deep Learning, Computer Vision, AI">
-  <meta name="author" content="Fei Zuo">
+  <meta name="author" content="Anonymous">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
+  <!-- Performance optimization -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Fei Zuo's Research">
+  <meta property="og:site_name" content="Anonymous Research">
   <meta property="og:title" content="AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification">
   <meta property="og:description" content="Our work introduces a purified benchmark, AndroidControl-Pro, to address systemic flaws in GUI agent evaluation, and a new SOTA model, Magma-R1, demonstrating that data quality is more critical than quantity.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/AndroidControl-Pro">
@@ -21,9 +28,10 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Data Quality vs Quantity in GUI Agent Training">
   <meta property="article:published_time" content="2024-09-01T00:00:00.000Z">
-  <meta property="article:author" content="Fei Zuo">
+  <meta property="article:author" content="Anonymous">
   <meta property="article:section" content="Research">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <meta name="twitter:creator" content="@feizuo_handle">
@@ -32,21 +40,37 @@
   <meta name="twitter:image" content="data_quality_vs_quantity.png">
   <meta name="twitter:image:alt" content="Data Quality vs Quantity in GUI Agent Training">
 
+  <!-- Academic citations -->
   <meta name="citation_title" content="AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification">
-  <meta name="citation_author" content="Zuo, Fei">
+  <meta name="citation_author" content="Anonymous">
   <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="Conference on Neural Information Processing Systems (NeurIPS) 2024">
+  <meta name="citation_conference_title" content="Under Review">
   <meta name="citation_pdf_url" content="AndroidControl-Pro-Magma-Manuscript.pdf">
   
-  <title>AndroidControl-Pro - Fei Zuo | Research</title>
+  <title>AndroidControl-Pro - Anonymous | Research</title>
   
   <link rel="icon" type="image/x-icon" href="BA_icon.jpg">
   <link rel="apple-touch-icon" href="BA_icon.jpg">
   
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
 
   <style>
     body {
@@ -87,15 +111,84 @@
       border-radius: 4px;
       padding: 5px 10px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
     .copy-bibtex-btn:hover {
       background-color: #e8e8e8;
     }
+    .copy-bibtex-btn.copied {
+      background-color: #48c78e;
+      color: white;
+    }
+    
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .scroll-to-top.visible {
+      opacity: 1;
+    }
+    .scroll-to-top:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
   </style>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification",
+    "description": "We reveal systemic flaws in existing GUI benchmarks and introduce AndroidControl-Pro, a purified benchmark for accurate evaluation.",
+    "author": [{
+      "@type": "Person",
+      "name": "Anonymous"
+    }],
+    "datePublished": "2024-09-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Under Review"
+    },
+    "url": "https://YOUR_DOMAIN.com/AndroidControl-Pro",
+    "image": "data_quality_vs_quantity.png",
+    "keywords": ["GUI Agents", "Benchmark Purification", "Data Quality", "Reinforcement Learning", "Autonomous Agents"],
+    "abstract": "On-device virtual assistants like Siri and Google Assistant are increasingly pivotal, yet their capabilities are hamstrung by a reliance on rigid, developer-dependent APIs. GUI agents offer a powerful, API-independent alternative, but their adoption is hindered by the perception of poor performance...",
+    "isAccessibleForFree": true,
+    "about": [{
+      "@type": "Thing",
+      "name": "GUI Agents"
+    }, {
+      "@type": "Thing", 
+      "name": "Benchmark Purification"
+    }, {
+      "@type": "Thing",
+      "name": "Data Quality"
+    }]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <main id="main-content">
   <section class="hero">
@@ -106,54 +199,81 @@
             <h1 class="title is-1 publication-title">AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="YOUR_PERSONAL_LINK" target="_blank">Fei Zuo</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="#" target="_blank">Author Two</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Author Three</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Your Institution<br>NeurIPS 2024</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <span class="link-block">
-                        <a href="AndroidControl-Pro-Magma-Manuscript.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+                Anonymous Authors
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Under Review</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="AndroidControl-Pro-Magma-Manuscript.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="supplementary.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Supplementary</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://github.com/YOUR_REPO_HERE" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+
+          <span class="link-block">
+            <a href="https://huggingface.co/your-dataset" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-database"></i>
+            </span>
+            <span>Dataset</span>
+          </a>
+        </span>
+
+        <span class="link-block">
+          <a href="https://huggingface.co/your-model" target="_blank"
+          class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+            <i class="fas fa-robot"></i>
+          </span>
+          <span>Model</span>
+        </a>
+      </span>
+
+      <span class="link-block">
+        <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="ai ai-arxiv"></i>
+        </span>
+        <span>arXiv</span>
+      </a>
+    </span>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="hero teaser">
@@ -166,6 +286,7 @@
     </div>
   </div>
 </section>
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -180,6 +301,7 @@
     </div>
   </div>
 </section>
+
 <section class="section contributions">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -197,6 +319,7 @@
         </div>
     </div>
 </section>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -224,6 +347,7 @@
 </div>
 </div>
 </section>
+
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -238,6 +362,7 @@
     </div>
   </div>
 </section>
+
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -247,15 +372,15 @@
           <span id="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@inproceedings{zuo2024androidcontrolpro,
+      <pre id="bibtex-code"><code>@inproceedings{anonymous2024androidcontrolpro,
   title={AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification},
-  author={Zuo, Fei and Author, Second and Author, Third},
-  booktitle={Conference on Neural Information Processing Systems (NeurIPS)},
-  year={2024},
-  url={https://your-domain.com/AndroidControl-Pro}
+  author={Anonymous},
+  booktitle={Under Review},
+  year={2024}
 }</code></pre>
     </div>
 </section>
+
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
@@ -272,16 +397,35 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
 <script>
-  bulmaCarousel.attach('#results-carousel', {
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    loop: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
+  // Initialize carousel when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
   });
 
+  // Scroll to top functionality
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  // Show/hide scroll button
+  window.onscroll = function() {
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  };
+
+  // Enhanced BibTeX copy function
   function copyBibTeX() {
     const bibtexCode = document.getElementById('bibtex-code');
     const range = document.createRange();
@@ -291,9 +435,14 @@
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
     
+    const copyBtn = document.querySelector('.copy-bibtex-btn');
     const copyText = document.getElementById('copy-text');
+    
+    copyBtn.classList.add('copied');
     copyText.textContent = 'Copied!';
+    
     setTimeout(() => {
+      copyBtn.classList.remove('copied');
       copyText.textContent = 'Copy';
     }, 2000);
   }
