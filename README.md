@@ -26,6 +26,12 @@ To address this, we introduce **AndroidControl-Pro**, a new benchmark created th
   <p><i>Overview of our integrated pipeline for Magma-R1 training and AndroidControl-Pro creation.</i></p>
 </div>
 
+## 🔥 News
+- 🔥 ***`2025/10/09`*** Our paper "[AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification](YOUR_ARXIV_PAPER_LINK)" released.
+
+## 🚀 Updates
+- ***`2025/09/30`*** The source code for `AndroidControl-Pro` and `Magma-R1` has been released.
+
 ## 📊 Results
 
 ### Table 1. Performance comparison of GUI agents on AndroidControl-Pro
