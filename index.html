@@ -23,7 +23,7 @@
   <meta property="og:title" content="AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification">
   <meta property="og:description" content="Our work introduces a purified benchmark, AndroidControl-Pro, to address systemic flaws in GUI agent evaluation, and a new SOTA model, Magma-R1, demonstrating that data quality is more critical than quantity.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/AndroidControl-Pro">
-  <meta property="og:image" content="data_quality_vs_quantity.png">
+  <meta property="og:image" content="static/images/data_quality_vs_quantity.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Data Quality vs Quantity in GUI Agent Training">
@@ -37,7 +37,7 @@
   <meta name="twitter:creator" content="@feizuo_handle">
   <meta name="twitter:title" content="AndroidControl-Pro: Revealing the True Potential of GUI Agents through Benchmark Purification">
   <meta name="twitter:description" content="We show that data quality, not quantity, is the key to high-performance GUI agents with our new benchmark AndroidControl-Pro and model Magma-R1.">
-  <meta name="twitter:image" content="data_quality_vs_quantity.png">
+  <meta name="twitter:image" content="static/images/data_quality_vs_quantity.png">
   <meta name="twitter:image:alt" content="Data Quality vs Quantity in GUI Agent Training">
 
   <!-- Academic citations -->
@@ -60,7 +60,6 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -322,30 +321,49 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Key Results & Insights</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/data_quality_vs_quantity.png" alt="Data Quality vs. Quantity Graph"/>
-        <h2 class="subtitle has-text-centered">
-          <b>Quality over Quantity.</b> Our Magma-R1 model, trained on just 2,400 purified samples, decisively outperforms models trained on over 31k noisy samples.
-        </h2>
+      
+      <!-- 第一个结果 - 数据质量 vs 数量 -->
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 3rem;">
+        <div class="column is-6">
+          <img src="static/images/data_quality_vs_quantity.png" alt="Data Quality vs. Quantity Graph" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+        </div>
+        <div class="column is-6">
+          <h3 class="title is-4">Quality over Quantity</h3>
+          <p class="content">
+            Our Magma-R1 model, trained on just <strong>2,400 purified samples</strong>, decisively outperforms models trained on over <strong>31k noisy samples</strong>. This demonstrates that data quality is fundamentally more important than data quantity in training high-performance GUI agents.
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <img src="static/images/casestudy.png" alt="Examples of benchmark deficiencies"/>
-        <h2 class="subtitle has-text-centered">
-          <b>Systematic Benchmark Flaws.</b> We identified three major error types in the original benchmark: Unclear Tasks, Multiple Valid Actions, and Wrong Ground Truth.
-        </h2>
+
+      <!-- 第二个结果 - 系统性基准缺陷 -->
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 3rem;">
+        <div class="column is-6">
+          <h3 class="title is-4">Systematic Benchmark Flaws</h3>
+          <p class="content">
+            We identified <strong>three major error types</strong> in the original AndroidControl benchmark: Unclear Tasks, Multiple Valid Actions, and Wrong Ground Truth. These systematic flaws led to severe underestimation of agent capabilities.
+          </p>
+        </div>
+        <div class="column is-6">
+          <img src="static/images/casestudy.png" alt="Examples of benchmark deficiencies" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+        </div>
       </div>
-      <div class="item">
-        <img src="static/images/sub_method.png" alt="Grounding Optimization from Point to Box"/>
-        <h2 class="subtitle has-text-centered">
-         <b>From Coordinate Matching to Intent Alignment.</b> We refine evaluation by checking if an action falls within the target element's bounding box, better reflecting user intent.
-       </h2>
-     </div>
+
+      <!-- 第三个结果 - 评估方法改进 -->
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-6">
+          <img src="static/images/sub_method.png" alt="Grounding Optimization from Point to Box" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+        </div>
+        <div class="column is-6">
+          <h3 class="title is-4">From Coordinate Matching to Intent Alignment</h3>
+          <p class="content">
+            We refine evaluation by checking if an action falls within the target element's <strong>bounding box</strong> rather than exact coordinate matching, better reflecting user intent and providing more reliable performance assessment.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 
 <section class="hero is-small is-light">
@@ -397,19 +415,7 @@
   </div>
 </footer>
 
-<script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
 <script>
-  // Initialize carousel when DOM is loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    bulmaCarousel.attach('#results-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-    });
-  });
-
   // Scroll to top functionality
   function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
