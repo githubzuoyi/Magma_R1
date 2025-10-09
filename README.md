@@ -22,7 +22,7 @@ In this work, we challenge the perception that on-device GUI agents are not yet 
 To address this, we introduce **AndroidControl-Pro**, a new benchmark created through a systematic purification pipeline. On this reliable benchmark, state-of-the-art models achieve success rates approaching 80% on challenging tasks. Furthermore, we demonstrate that data quality is paramount: our new SOTA model, **Magma-R1**, trained on just 2,400 curated samples, decisively outperforms models trained on over 31k noisy data points. We release our benchmark and model to accelerate the development of the next generation of powerful, on-device virtual assistants.
 
 <div align="center">
-  <img src="static/images/method.png" width="70%" alt="Method Overview">
+  <img src="static/images/method.png" width="90%" alt="Method Overview">
   <p><i>Overview of our integrated pipeline for Magma-R1 training and AndroidControl-Pro creation.</i></p>
 </div>
 
